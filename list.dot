@@ -1,0 +1,370 @@
+digraph List {
+rankdir=LR;
+// rankdir=LR|RL|BT 
+node [fontcolor = blue];
+// size = "11,100"
+// ratio = 10.0
+
+// Contemporary programming languages that you should know
+{
+    rank = source;
+    node [
+        shape = diamond, 
+        color = darkgreen, 
+        fillcolor = palegreen, 
+        style=filled,
+        fontcolor = black
+    ];
+
+
+    C_x86 [
+        label=<<u>C and basic x86:<br/>pointers</u>>
+    ];
+
+    OCaml [
+        label=<<u>OCaml or Standard ML:<br/>the module systems (functors)</u>>
+    ];
+
+    Haskell [
+        label=<<u>Haskell:<br/>lazy evaluation and type classes</u>>
+    ];
+
+    Scheme [
+        label=<<u>Scheme or Racket:<br/>macros</u>>
+    ];
+
+    Lisp [
+        label=<Lisp:<br/>S Expressions>
+    ];
+
+    Java_Scala [
+        label=<<u>Java and Scala:<br/>type systems for OOP</u>>
+    ];
+
+    Coq [
+        label=<<u>Coq: dependent types</u>>
+    ];
+    
+    
+    // Other random stuff
+    {
+        AbstractAlgebra [
+            label=<Math Maturity,<br/>Algebraic Structures>
+        ];
+    }
+}
+
+
+// Books
+{
+    rank = same;
+    node [
+        shape = box, 
+        color = goldenrod, 
+        fillcolor = palegoldenrod, 
+        style=filled
+    ];
+
+    TAPL [
+        label=<<u>Types and programming languages (TAPL)<br/>B.C. Pierce</u>>,
+        URL="URL"
+    ];
+
+    Basic_category_theory [
+        label=<<u>Basic category theory for computer scientists<br/>B.C. Pierce</u>>,
+        URL="URL"
+    ];
+    AbstractAlgebra -> Basic_category_theory;
+
+    Programming_in_M_Type_Theory [
+        label=<<u>Programming in Martin-Löf’s Type Theory<br/>Nordström</u>>,
+        URL="http://www.cse.chalmers.se/research/group/logic/book/book.pdf"
+    ];
+    AbstractAlgebra -> Programming_in_M_Type_Theory;
+
+    PL_Application_Interpretation [
+        label=<<u>PL: Application &amp; Interpretation<br/>Krishnamurthi</u>>,
+        URL="http://cs.brown.edu/courses/cs173/2012/book/book.pdf"
+    ]; 
+}
+
+
+
+// PAPERS!!!
+{
+    // Semantics
+
+    Friedman1976 [
+        label=<<u>Cons should not evaluate its arguments<br/>D.P. Friedman and D.S. Wise. 1976.</u>>,
+        URL="https://www.cs.indiana.edu/pub/techreports/TR44.pdf"
+    ];
+    Lisp -> Friedman1976;
+
+    Reynolds1972 [
+        label=<<u>Definitional Interpreters for Higher-Order Programming Languages<br/>J.C. Reynolds. 1972.</u>>,
+        URL="https://www.classes.cs.uchicago.edu/archive/2007/fall/22100-1/papers/definterp.pdf"
+    ];
+
+    Plotkin1975 [
+        label=<<u>Call-by-name, call-by-value, and the Lambda Calculus<br/>G. Plotkin. 1975.</u>>,
+        URL="http://homepages.inf.ed.ac.uk/gdp/publications/cbn_cbv_lambda.pdf"
+    ];
+    Landin1966 -> Plotkin1975;
+
+    Landin1964 [
+        label=<<u>The Mechanical Evaluation of Expressions<br/>P.J. Landin. 1964.</u>>,
+        URL="https://www.cs.cmu.edu/afs/cs/user/crary/www/819-f09/Landin64.pdf"
+    ];
+
+    Landin1966 [
+        label=<<u>The Next 700 Programming Languages<br/>P.J. Landin. 1966.</u>>,
+        URL="http://homepages.inf.ed.ac.uk/wadler/papers/papers-we-love/landin-next-700.pdf"
+    ];
+    Landin1964 -> Landin1966;
+
+    Felleisen1986 [
+        label=<<u>Control Operators, the SECD Machine, and the Lambda Calculus<br/>M. Felleisen and D.P. Friedman. 1986.</u>>,
+        URL="https://www.cs.indiana.edu/ftp/techreports/TR197.pdf"
+    ];
+    Landin1966 -> Felleisen1986;
+
+    Hoare1969 [
+        label=<<u>An Axiomatic Basis for Computer Programming<br/>C.A.R. Hoare. 1969.</u>>,
+        URL="https://www.cs.cmu.edu/~crary/819-f09/Hoare69.pdf"
+    ];
+
+    Felleisen1991 [
+        label=<<u>On the expressive power of programming languages<br/>M. Felleisen. 1991.</u>>,
+        URL="https://pdfs.semanticscholar.org/2798/5884a1947b656424b0956f82caeddde546a1.pdf"
+    ];
+    Scheme -> Felleisen1991;
+
+    Felleisen1992 [
+        label=<<u>The revised report on the syntactic theories of sequential control and state<br/>M. Felleisen and R. Heib. 1992.</u>>,
+        URL="https://www2.ccs.neu.edu/racket/pubs/tcs92-fh.pdf"
+    ];
+
+    Sabry1993 [
+        label=<<u>Reasoning about programs in continuation passing style<br/>A. Sabry and M. Felleisen. 1993.</u>>,
+        URL="https://www.cs.indiana.edu/~sabry/papers/reasoning-lasc.ps"
+    ];
+    Scheme -> Sabry1993;
+    Plotkin1975 -> Sabry1993;
+
+    Kozen1997 [
+        label=<<u>Kleene Algebra with Tests<br/>D. Kozen. 1997.</u>>,
+        URL="https://dl.acm.org/citation.cfm?doid=256167.256195"
+    ];
+    AbstractAlgebra -> Kozen1997;
+
+    Guha2010 [
+        label=<<u>The essence of JavaScript<br/>A. Guha, C. Saftoiu, and S. Krishnamurthi. 2010.</u>>,
+        URL="https://people.cs.umass.edu/~arjun//papers/2010-guha-ecoop.html"
+    ];
+    Plotkin1975 -> Guha2010;
+
+    Bird1986 [
+        label=<<u>An introduction to the theory of lists<br/>R. Bird. 1986.</u>>,
+        URL="https://www.cs.ox.ac.uk/files/3378/PRG56.pdf"
+    ];
+    AbstractAlgebra -> Bird1986; 
+
+
+
+    // Macros
+
+    Krishnamurthi2006 [
+        label=<<u>Automata via Macros<br/>S. Krishnamurthi. 2006.</u>>,
+        URL="https://cs.brown.edu/~sk/Publications/Papers/Published/sk-automata-macros/paper.pdf"
+    ];
+    Scheme -> Krishnamurthi2006;
+
+    Flatt2002 [
+        label=<<u>Composable and compilable macros: you want it when?<br/>M. Flatt. 2002.</u>>,
+        URL="https://www.cs.utah.edu/plt/publications/macromod.pdf"
+    ];
+    Scheme -> Flatt2002;
+
+
+
+    // Type systems: foundations
+
+    Harper [
+        label=<<u>A type-theoretic interpretation of Standard ML<br/>R. Harper and C. Stone.</u>>,
+        URL="https://www.cs.cmu.edu/~rwh/papers/ttisml/ttisml.pdf"
+    ];
+    OCaml -> Harper;
+    TAPL -> Harper;
+
+    Wright1994 [
+        label=<<u>A syntactic approach to type soundness<br/>A.K. Wright and M. Felleisen. 1994.</u>>,
+        URL="https://web.eecs.umich.edu/~weimerw/2008-615/reading/wright92syntactic.pdf"
+    ];
+    OCaml -> Wright1994;
+    TAPL -> Wright1994;
+
+    Milner1969 [
+        label=<<u>A theory of type polymorphism in programming<br/>R. Milner. 1969.</u>>,
+        URL="https://www.sciencedirect.com/science/article/pii/0022000078900144"
+    ];
+    TAPL -> Milner1969;
+
+    Wadler1989 [
+        label=<<u>How to make ad hoc polymorphism less ad hoc<br/>P. Wadler and S. Blott. 1989.</u>>,
+        URL="https://dl.acm.org/citation.cfm?doid=75277.75283"
+    ];
+    Milner1969 -> Wadler1989;
+    Haskell -> Wadler1989;
+
+    Wright1995 [
+        label=<<u>Simple Imperative Polymorphism<br/>A. Wright. 1995.</u>>,
+        URL="https://pdfs.semanticscholar.org/fd1d/87c648622ebbc7f086b26c23a947889bb90d.pdf"
+    ];
+    OCaml -> Wright1995;
+    Milner1969 -> Wright1995;
+
+
+    // Type systems: applications
+
+    Morrissett2012 [
+        label=<<u>RockSalt: better, faster, stronger SFI for the x86<br/>G. Morrissett, G. Tan, et al. 2012.</u>>,
+        URL="http://www.cse.psu.edu/~gxt29/papers/rocksalt.pdf"
+    ];
+
+    Morrissett1999 [
+        label=<<u>From System F to Typed Assembly Language<br/>G. Morrissett, D. Walker, K. Crary, and N. Glew. 1999.</u>>,
+        URL="https://www.cs.princeton.edu/~dpw/papers/tal-toplas.pdf"
+    ];
+    TAPL -> Morrissett1999 [label="Ch. 1-24"];
+
+
+    // Language-based security
+
+    Heintze1998 [
+        label=<<u>The SLam calculus: programming with secrecy and integrity<br/>N Heintze and J. Reicke. 1998.</u>>,
+        URL="https://dl.acm.org/citation.cfm?id=268976"
+    ];
+    TAPL -> Heintze1998;
+
+    Myers1997 [
+        label=<<u>A decentralized model for information flow control<br/>A. Myers and B. Liskov. 1997.</u>>,
+        URL="https://dl.acm.org/citation.cfm?id=266669"
+    ];
+
+    Clarkson2010 [
+        label=<<u>Hyperproperties<br/>M. Clarkson and F. Schneider. 2010.</u>>,
+        URL="https://www.cs.cornell.edu/fbs/publications/HyperpropertiesCSFW.pdf"
+    ];
+    AbstractAlgebra -> Clarkson2010;
+
+
+    // Program Analysis
+
+    Shivers1991 [
+        label=<<u>Control flow analysis of higher-order languages, or “taming lambda”<br/>O. Shivers. 1991.</u>>,
+        URL="http://www.ccs.neu.edu/home/shivers/papers/diss.pdf"
+    ];
+    Scheme -> Shivers1991;
+
+    Cousot1977 [
+        label=<<u>Abstract Interpretation: A Unified Lattice Model for Static Analysis of Programs by Construction or Approximation of Fixpoints<br/>P. Cousot and R. Cousot</u>>,
+        URL="https://www.di.ens.fr/~cousot/COUSOTpapers/publications.www/CousotCousot-POPL-77-ACM-p238--252-1977.pdf"
+    ];
+    AbstractAlgebra -> Cousot1977;
+
+
+    // Functional Programming
+
+    Meijer1991 [
+        label=<<u>Functional programming with bananas, lenses, envelopes, and barbed wire<br/>E. Meijer. 1991.</u>>,
+        URL="https://maartenfokkinga.github.io/utwente/mmf91m.pdf"
+    ];
+    Haskell -> Meijer1991;
+
+    Hughes1998 [
+        label=<<u>Generalizing Monads to Arrows<br/>J. Hughes. 1998.</u>>,
+        URL="http://www.cse.chalmers.se/~rjmh/Papers/arrows.pdf"
+    ];
+    Haskell -> Hughes1998;
+
+    Huet1997 [
+        label=<<u>Functional pearl: the zipper<br/>G. Huet. 1997.</u>>,
+        URL="https://www.st.cs.uni-saarland.de/edu/seminare/2005/advanced-fp/docs/huet-zipper.pdf"
+    ];
+    OCaml -> Huet1997 [label = "or Haskell"];
+
+    Swierstra2008 [
+        label=<<u>Data types a la carte<br/>W. Swierstra. 2008.</u>>,
+        URL="http://www.cs.ru.nl/~W.Swierstra/Publications/DataTypesALaCarte.pdf"
+    ];
+    Haskell -> Swierstra2008;
+
+    Elliott1997 [
+        label=<<u>Functional reactive animation<br/>C. Elliott and P. Hudak. 1997.</u>>,
+        URL="https://dl.acm.org/citation.cfm?doid=258948.258973"
+    ];
+    Haskell -> Elliott1997
+
+    Laemmel2003 [
+        label=<<u>Scrap your boilerplate: a practical approach to generic programming<br/>R. Laemmel and S. P. Jones. 2003. (and the two follow-up papers)</u>>,
+        URL="https://www.microsoft.com/en-us/research/publication/scrap-your-boilerplate-a-practical-approach-to-generic-programming/"
+    ];
+    Haskell -> Laemmel2003 [label = "+ higher-ranked types"];
+
+
+
+    // Object Oriented Programming
+
+    Wadler1996 [
+        label=<<u>The expression problem<br/>P. Wadler. 1996.</u>>,
+        URL="http://homepages.inf.ed.ac.uk/wadler/papers/expression/expression.txt"
+    ];
+    Java_Scala -> Wadler1996 [label = "+ generics"];
+
+    Liskov1994 [
+        label=<<u>A behavioral notion of subtyping<br/>B. Liskov and J. Wing. 1994.</u>>,
+        URL="https://dl.acm.org/citation.cfm?doid=197320.197383"
+    ];
+    Java_Scala -> Liskov1994;
+
+
+    // Learning Theory
+
+    Valiant1984 [
+        label=<<u>A Theory of the Learnable<br/>L.G. Valiant. 1984</u>>,
+        URL="http://web.mit.edu/6.435/www/Valiant84.pdf"
+    ];
+
+    Angluin1987 [
+        label=<<u>Learning Regular Sets from Queries and Counterexamples<br/>D. Angluin. 1987</u>>,
+        URL="http://people.eecs.berkeley.edu/~dawnsong/teaching/s10/papers/angluin87.pdf"
+    ];
+
+
+
+    // Regular Languages and Finite Automata
+
+    Brzozowski1964 [
+        label=<<u>Derivatives of Regular Expressions<br/>J. Brzozowski. 1964</u>>,
+        URL="https://dl.acm.org/citation.cfm?id=321249"
+    ];
+
+
+
+    // Program Synthesis
+
+    Gulwani2010 [
+        label=<<u>Dimensions in Program Synthesis<br/>S. Gulwani. 2010.</u>>,
+        URL="https://dl.acm.org/citation.cfm?id=1836091"
+    ];
+
+
+
+    // Linear Logic
+
+    Baker1994 [
+        label=<<u>Linear Logic and permutation stacks<br/>H. Baker. 1994.</u>>,
+        URL="http://home.pipeline.com/~hbaker1/ForthStack.html"
+    ];
+}
+}

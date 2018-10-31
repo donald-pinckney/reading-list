@@ -1,0 +1,95 @@
+Contemporary programming languages that you should know
+C and basic x86 assembly: pointers
+OCaml or Standard ML: the module systems (functors)
+Haskell: lazy evaluation and type classes
+Scheme or Racket: macros
+Java and Scala: type systems for object oriented programming
+Coq: dependent types
+
+
+Books
+B.C. Pierce. Types and programming languages (TAPL).
+B.C. Pierce. Basic category theory for computer scientists.
+Prerequisites: “mathematical maturity”
+Nordström, Peterson, Smith. Programming in Martin-Löf’s Type Theory
+Krishnamurthi. PL: Application & Interpretation 
+
+
+Semantics
+D.P. Friedman and D.S. Wise. Cons should not evaluate its arguments. 1976. 
+J.C. Reynolds. Definitional Interpreters for Higher-Order Programming Languages. 1972.
+G. Plotkin. Call-by-name, call-by-value, and the Lambda Calculus. 1975.
+P.J. Landin. The Mechanical Evaluation of Expressions. 1964.
+P.J. Landin. The Next 700 Programming Languages. 1966.
+M. Felleisen and D.P. Friedman. Control Operators, the SECD Machine, and the Lambda Calculus. 1986.
+C.A.R. Hoare. An Axiomatic Basis for Computer Programming. 1975.
+Summary: Introduces Hoare Logic and axiomatic semantics. There are newer presentations of the material in this paper.
+M. Felleisen. On the expressive power of programming languages. 1991.
+M. Felleisen and R. Heib. The revised report on the syntactic theories of sequential control and state. 1992.
+A Sabry and M. Felleisen. Reasoning about programs in continuation passing style. 1993.
+D. Kozen. Kleene Algebra with Tests. 1997.
+Prerequisites: familiarity with regular expressions and abstract algebra (groups and rings) will help, but the paper doesn’t assume it.
+A. Guha, C. Saftoiu, and S. Krishnamurthi. The essence of JavaScript. 2010.
+Prerequisites: operational semantics. A case-study in how to build semantics for messy, real-world programming languages.
+R. Bird. An introduction to the theory of lists. 1986.
+
+
+Macros
+S. Krishnamurthi. Automata via Macros. 2006.
+M. Flatt. Composable and compilable macros: you want it when? 2002.
+
+
+Type systems: foundations
+R. Harper and C. Stone. A type-theoretic interpretation of Standard ML. 
+A.K. Wright and M. Felleisen. A syntactic approach to type soundness. 1994.
+R. Milner. A theory of type polymorphism in programming. 1969.
+P. Wadler and S. Blott. How to make ad hoc polymorphism less ad hoc. 1989.
+This paper presents  Haskell’s type classes, which are covered by any decent Haskell tutorial. However, this paper also sketches how they are typechecked.
+A. Wright. Simple Imperative Polymorphism. 1995.
+
+
+Type systems: applications
+G. Morrissett, G. Tan, et al. RockSalt: better, faster, stronger SFI for the x86. 2012.
+G. Morrissett, D. Walker, K. Crary, and N. Glew. From System F to Typed Assembly Language. 1999.
+
+
+Language-based security
+N Heintze and J. Reicke. The SLam calculus: programming with secrecy and integrity. 1998.
+A. Myers and B. Liskov. A decentralized model for information flow control. 1997.
+M. Clarkson and F. Schneider. Hyperproperties. 2010.
+
+
+Program Analysis
+O. Shivers. Control flow analysis of higher-order languages, or “taming lambda”. 1991.
+
+
+Functional Programming
+E. Meijer. Functional programming with bananas, lenses, envelopes, and barbed wire. 1991.
+J. Hughes. Generalizing Monads to Arrows. 1998.
+G. Huet. Functional pearl: the zipper. 1997.
+W. Swierstra. Data types a la carte. 2008.
+C. Elliott and P. Hudak. Functional reactive animation. 1997.
+R. Bird. An introduction to the theory of lists. 1986.
+R. Laemmel and S. P. Jones. Scrap your boilerplate: a practical approach to generic programming. 2003 (and the two follow-up papers)
+
+
+Object Oriented Programming
+P. Wadler. The expression problem. 1996.
+B. Liskov and J. Wing. A behavioral notion of subtyping. 1994.
+
+
+Learning Theory
+L.G. Valiant. A Theory of the Learnable. 1984
+D. Angluin. Learning Regular Sets from Queries and Counterexamples. 1987
+
+
+Regular Languages and Finite Automata
+J. Brzozowski. Derivatives of Regular Expressions.
+
+
+Program Synthesis
+S. Gulwani. Dimensions in Program Synthesis. 
+
+
+Linear Logic
+H. Baker Linear Logic and permutation stacks
